@@ -20,9 +20,9 @@ def static_proxy(path):
 @app.route("/search")
 def search():
     data = request.args
-    print data
+    print (data)
     keyword = data["q"]
-    print keyword
+    print (keyword)
     jobs = []
     results = search_reddit(query = keyword)
     jobs = [r for r in results]
